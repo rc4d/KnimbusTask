@@ -6,6 +6,7 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "heroku": "^7.46.2",
     "mongoose": "^5.10.9",
     "node-fetch": "^2.6.1"
   },
