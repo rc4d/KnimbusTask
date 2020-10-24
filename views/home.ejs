@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web crawler</title>
+    <script src="https://kit.fontawesome.com/03e233b384.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>
+        Directory of Open Access Journals
+    </h2>
+     
+    <ol>
+        
+        <%if(locals.records) {%>
+            <%for(i of records ){%>
+                
+               <li>
+                   <ul>
+
+                  
+                    <i style="font-size: 24px" class="far fa-file-alt"></i>
+                      <%=i.title%>
+                     
+                   <br> <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                 <%=i.year%></li>
+                   <li><b>URL :</b> <a href="<%=i.url%>" ><%=i.url%></a></li>
+                   <li>
+                    <b>Authors Name :</b>
+                  
+                   <ul>
+                    
+                    <%for(author of i.author ){%>
+
+                        
+                        <li>
+                           <%=author%> 
+                             
+                        </li>
+                        <%}%>
+                        
+                   </ul>
+                </li>
+                </ul>
+               </li>
+              <br><br>
+
+            <%}%>
+
+            <%}%>
+            
+    </ol>
+    <h2 style="text-align: center;">------ End of Records ------</h2>
+</body>
+</html>
