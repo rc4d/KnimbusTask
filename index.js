@@ -44,9 +44,9 @@ app.get('/',(req,res)=>{
 
    
 }) 
- 
 
-app.listen(process.env.PORT || port,(err)=>{
+
+app.listen(port,(err)=>{
     if(err){console.log(`error in firing up the server ${err}`)};
     console.log(`server is running on port : ${port}`)
 })
